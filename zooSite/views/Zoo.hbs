@@ -1,0 +1,120 @@
+
+
+
+<head>
+  
+
+</head>
+<body style="background-color:rgb(81, 177, 135);">  
+
+
+
+  <header>
+    <h1>Zoos</h1>
+
+
+
+    <nav>
+      <a href="/index">main</a> |
+     
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <section>
+        
+      <h3>Zoo Database</h3>
+        
+      <article>
+        This section manages our zoo locations.
+        
+      </article>
+     
+      <article>
+      
+     
+        <table id = "zooTable">
+          <tr id = "zooTableHeadings">
+            {{#each data.[0]}}
+
+            <th>{{@key}}</th>
+            {{/each}}
+          </tr>
+           {{#each data}}
+          <tr>
+            <td>{{this.zoo_ID}}</td>
+            <td>{{this.zoo_Name}}</td>
+            <td>{{this.phone}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.num_Habs}}</td>
+            <td>{{this.num_Animals}}</td>
+            <td><button onclick="deleteZoo({{this.zoo_ID}})">Delete</button></td>
+          </tr>
+          {{/each}}
+        </table> 
+      </article>
+   
+        <h3>Zoo Data Entry Form</h3>
+        <form id = "zooDataEntry">
+            <fieldset>
+                <legend>Use this to add a new habitat.
+                </legend>
+                <div>
+
+                    <input type="text" name="zoo_Name" id = "input-zoo_Name" required>
+                    <label>Enter the name of the zoo</label>
+                </div>
+                
+                <div>
+
+                    <input type="text" name="phone" id = "input-phone"  required>
+                    <label>Enter the zoo's phone number</label>
+
+                </div>
+
+             
+                <div>
+
+                    <input type="text" name="email" id = "input-email" required>
+                    <label>Enter the zoo's email</label>
+
+                </div>
+                <div>
+
+                    <input type="text" name="num_Habs" id = "input-num_Habs" required>
+                    <label>Enter the zoo's number of habitats</label>
+
+                </div>
+                <div>
+
+                    <input type="text" name="num_Animals" id = "input-num_Animals"required>
+                    <label>Enter the zoo's number of animals</label>
+
+                </div>
+                     
+                <input type="submit">
+
+
+            </fieldset>
+
+            </form>
+            <script src="./js/ZooManager.js"></script>
+
+
+    </section>
+    
+    <footer style="background-color:rgb(218, 63, 25);"> Larsen Freund, 2024</footer>
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+

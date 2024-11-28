@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Larsen Freund</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tableStyle.css">
+
+  <script src="centerZooScript.js"></script>
+
+</head>
+<body style="background-color:rgb(81, 177, 135);">  
+
+
+
+  <header>
+    <h1>Habitats</h1>
+
+
+
+    <nav>
+      <a href="../index.html">main</a> |
+      <a href="Zoo.html">Manage Zoos</a> |
+      <a href="Animal.html">Manage Animals</a> |
+      <a href="Employee.html">Manage Employees</a> |
+      <a href="DoctorVisit.html">Manage Doctor's Visits</a> |
+     
+
+  
+  
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="dropdown">
+      <button onclick="dropdownFunction()" class="dropbtn">Filter Content By Avalibility</button>
+      <div id="myDropdown" class="dropdown-content">
+        <button>Open</button>
+        <button>Closed</button>
+      </div>
+    </div> 
+    <section>
+        
+      <h3>Habitat Database</h3>
+        
+      <article>
+        
+        This section manages our habitats. Use the form below to submit your own habitats that should be added to our database.
+        ID's are automatically handled for you.
+       
+      </article>
+     
+      <article>
+      
+     
+        <table id = "habitatTable">
+          <tr id = "habitatTableHeadings">
+            <th class = "prikey">Habitat ID</th> 
+            <th class = "forkey">Zoo ID</th>
+            <th>Habitat Name</th>
+            <th>Enviroment</th>
+            <th>Is it open?</th>
+            <th>Edit Entry</th>
+            <th>Update Entry</th>
+            <th class = "manytomany">Assigned Employees</th>
+
+          </tr>
+          
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>The Arctic Park</td>
+            <td>Tundra</td>
+            <td>True</td>
+
+            <td><button>Edit Habitat</button></td>
+            <td><button>Delete Habitat</button></td>
+            <td><button>View Assigned Employees</button></td>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Swampland</td>
+            <td>Swamp</td>
+            <td>False</td>
+
+            <td><button>Edit Habitat</button></td>
+            <td><button>Delete Habitat</button></td>
+            <td><button>View Assigned Employees</button></td>
+
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Desert Dome</td>
+            <td>Desert</td>
+            <td>True</td>
+            <td><button>Edit Habitat</button></td>
+            <td><button>Delete Habitat</button></td>
+            <td><button>View Assigned Employees</button></td>
+
+          </tr>
+
+        </table> 
+      </article>
+       
+    </section>
+    <div class = "warning">
+        Please do NOT enter any data you wish to be saved at the moment.
+    </div>
+    <section id = "habitatDataEntry">
+        <h3>Habitat Data Entry Form</h3>
+        <form action="">
+            <fieldset>
+                <legend>If a new habitat has opened up, please enter the data below. This data will be automatically submitted to our list of
+                    new zoos.
+                </legend>
+                <div>
+
+                  <input type="text" name="hab_ID" required>
+                  <label>Enter the ID of the zoo the habitat is located in</label>
+              </div>
+                <div>
+
+                    <input type="text" name="hab_Name" required>
+                    <label>Enter the name of the habitat</label>
+                </div>
+                
+                <div>
+                    <input type="text" name="hab_Enviroment" required>
+                    <label>Enter the habitat's enviroment type</label>
+                </div>
+                <div>
+
+                  <textarea name="habitatemployees"></textarea>
+                  <label>Enter the NAME of all employees at this habitat. Seperate each name with a comma.</label>
+                </div>
+                <input type="submit" value="Submit">
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Is this habitat open?</legend>
+
+                <div>
+                    <input type="radio" id="yesOpen" name="drone" value="1" checked>
+                    <label for="yesOpen">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="noOpen" name="drone" value="0" checked>
+                    <label for="noOpen">No</label>
+                  </div>
+
+                  <input type="submit" value="Submit">
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <footer style="background-color:rgb(218, 63, 25);"> Larsen Freund & Jacob Hutalla, 2024</footer>
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

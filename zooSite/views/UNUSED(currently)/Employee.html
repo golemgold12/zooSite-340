@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Larsen Freund</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tableStyle.css">
+
+  <script src="centerZooScript.js"></script>
+
+</head>
+<body style="background-color:rgb(81, 177, 135);">  
+
+
+
+  <header>
+    <h1>Employee</h1>
+
+
+
+    <nav>
+      <a href="../index.html">main</a> |
+      <a href="Animal.html">Manage Animals</a> |
+      <a href="Habitat.html">Manage Habitats</a> |
+      <a href="Zoo.html">Manage Zoos</a> |
+      <a href="DoctorVisit.html">Manage Doctor's Visits</a> |
+     
+
+  
+  
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <section>
+        
+      <h3>Employee Database</h3>
+        
+      <article>
+        
+        This section manages our Employees. Use the form below to submit your own employee records that should be added to our database.
+        ID's are automatically handled for you.
+       
+        Viewing Comments nor the list of habitats a employee is assigned to is not currently not functional.
+      </article>
+      <div class="dropdown">
+        <button onclick="dropdownFunction()" class="dropbtn">Filter Employees</button>
+        <div id="myDropdown" class="dropdown-content">
+          <button>Less then 1 written action</button>
+          <button>At least one written action</button>
+          <button>More then one written action</button>
+
+        </div>
+      </div> 
+      <article>
+       <!--We need to use javascript to append the "edit, update" entries automatically.-->
+     
+        <table id = "employeeTable">
+          <tr id = "employeeTableHeadings">
+            <th class = "prikey">Employee ID</th> 
+            <th class = "forkey">Zoo</th>
+            <th>writeups</th>
+            <th>Employee Name</th>
+            <th>Position</th>
+            <th>Comments</th>
+            <th>Edit Entry</th>
+            <th>Update Entry</th>
+            <th class = "manytomany">Assigned Habitats</th>
+
+          </tr>
+          
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Ethan</td>
+            <td>Desert Worker</td>
+            <td><button>View Employee Comments/Remarks</button></td>
+            <td><button>Edit Employee</button></td>
+            <td><button>Delete Employee</button></td>
+            <td><button>View Assigned Habitats</button></td> 
+
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Leena</td>
+            <td>Swamp Worker</td>
+            <td><button>View Employee Comments/Remarks</button></td>
+            <td><button>Edit Employee</button></td>
+            <td><button>Delete Employee</button></td>
+            <td><button>View Assigned Habitats</button></td> 
+
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Martin</td>
+            <td>Arctic Worker</td>
+            <td><button>View Employee Comments/Remarks</button></td>
+            <td><button>Edit Employee</button></td>
+            <td><button>Delete Employee</button></td>
+            <td><button>View Assigned Habitats</button></td> 
+
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Sarah</td>
+            <td>Swamp Worker</td>
+            <td><button>View Employee Comments/Remarks</button></td>
+            <td><button>Edit Employee</button></td>
+            <td><button>Delete Employee</button></td>
+            <td><button>View Assigned Habitats</button></td> 
+
+          </tr>
+        </table> 
+      </article>
+       
+    </section>
+    <div class = "warning">
+        Please do NOT enter any data you wish to be saved at the moment.
+    </div>
+
+    
+    <section id = "employeeDataEntry">
+        <h3>Employee Data Entry Form</h3>
+        <form action="">
+            <fieldset>
+                <legend>This form allows you to add a new employee to our database.
+                </legend>
+                <div>
+
+                    <input type="text" name="zoo_ID" required>
+                    <label>Enter the zoo_ID that the employee works at</label>
+                </div>
+                <div>
+                  <input type="text" name="writeups" required>
+                  <label>Enter the employee's total number of writeups or infractions</label>
+                </div>
+             
+                <div>
+                    <input type="text" name="employee_Name" required>
+                    <label>Enter the employee's name</label>
+                </div>
+               
+                <div>
+                  <input type="text" name="employee_Name" required>
+                  <label>Enter the employee's job position</label>
+                </div>
+             
+                <input type="submit" value="Submit">
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Type out your comments on the employee below.</legend>
+
+                <div>
+
+                  <textarea name="employeeComments"></textarea>
+                  <label>Enter any comments in paragraph form about the employee.</label>
+                </div>
+                <div>
+
+                  <textarea name="employeeHabitats"></textarea>
+                  <label>Enter the NAME of all habitats a employee works at. Seperate each name with a comma.</label>
+                </div>
+                  
+                  <input type="submit" value="Submit">
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <footer style="background-color:rgb(218, 63, 25);"> Larsen Freund & Jacob Hutalla, 2024</footer>
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

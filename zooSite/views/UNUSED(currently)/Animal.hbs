@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Larsen Freund</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tableStyle.css">
+
+  <script src="centerZooScript.js"></script>
+
+</head>
+<body style="background-color:rgb(81, 177, 135);">  
+
+
+
+  <header>
+    <h1>Animal</h1>
+
+   
+    <nav>
+      <a href="../index.html">main</a> |
+      <a href="Zoo.html">Manage Zoos</a> |
+      <a href="Habitat.html">Manage Habitats</a> |
+      <a href="Employee.html">Manage Employees</a> |
+      <a href="DoctorVisit.html">Manage Doctor's Visits</a> |
+     
+
+  
+  
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="dropdown">
+      <button onclick="dropdownFunction()" class="dropbtn">Filter Content By Habitat</button>
+      <div id="myDropdown" class="dropdown-content">
+        <button>Desert</button>
+        <button>Tundra</button>
+        <button>Swamp</button>
+      </div>
+    </div> 
+
+    <section>
+     
+      <h3>Animal Database</h3>
+        
+      <article>
+        
+        This section manages our animals. Use the form below to submit your own animals that should be added to our database.
+        ID's are automatically handled for you.
+       
+      </article>
+     
+      <article>
+      
+     
+        <table id = "animalTable">
+          <tr id = "animalTableHeadings">
+            <th class = "prikey">Animal ID</th> 
+            <th class = "forkey">Habitat ID</th>
+            <th>Animal Name</th>
+            <th>Species</th>
+            <th>Preffered Enviroment</th>
+            <th>Healthy?</th>
+            <th>Edit Entry</th>
+            <th>Update Entry</th>
+
+          </tr>
+          
+          <tr>
+            <td>0</td>
+            <td>2</td>
+            <td>Corny</td>
+            <td>zea mays</td>
+            <td>Desert</td>
+            <td>True</td>
+            <td><button>Edit Animal</button></td>
+            <td><button>Delete Animal</button></td>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>Peter</td>
+            <td>H. suspectum</td>
+            <td>Desert</td>
+            <td>True</td>
+            <td><button>Edit Animal</button></td>
+            <td><button>Delete Animal</button></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>Alvin</td>
+            <td>Crocodylus porosus</td>
+            <td>Swamp</td>
+            <td>True</td>
+            <td><button>Edit Animal</button></td>
+            <td><button>Delete Animal</button></td>
+          </tr>
+
+        </table> 
+      </article>
+
+     
+    </section>
+    <div class = "warning">
+        Please do NOT enter any data you wish to be saved at the moment.
+    </div>
+    <section id = "animalDataEntry">
+        <h3>Animal Data Entry Form</h3>
+        <form action="">
+            <fieldset>
+                <legend>This form allows you to add a new animal to our database.
+                </legend>
+                <div>
+
+                    <input type="text" name="hab_ID" required>
+                    <label>Enter the habitat ID of the animal's habitat</label>
+                </div>
+                <div>
+                    <input type="text" name="animal_Name" required>
+                    <label>Enter the animals's name</label>
+                </div>
+                <div>
+                    <input type="text" name="species" required>
+                    <label>Enter the animals's species</label>
+                </div>
+                <div>
+                    <input type="text" name="preferred_Enviroment" required>
+                    <label>Enter the animals's preferred living enviroment</label>
+                </div>
+                
+                <input type="submit" value="Submit">
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Is this animal currently healthy?</legend>
+
+                <div>
+                    <input type="radio" id="yesHealthy" name="drone" value="1" checked>
+                    <label for="yesHealthy">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="noHealthy" name="drone" value="0" checked>
+                    <label for="noHealthy">No</label>
+                  </div>
+                  <input type="submit" value="Submit">
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <footer style="background-color:rgb(218, 63, 25);"> Larsen Freund & Jacob Hutalla, 2024</footer>
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

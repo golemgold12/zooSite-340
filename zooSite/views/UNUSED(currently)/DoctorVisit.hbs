@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Larsen Freund</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tableStyle.css">
+
+  <script src="centerZooScript.js"></script>
+
+</head>
+<body style="background-color:rgb(81, 177, 135);">  
+
+
+
+  <header>
+    <h1>Doctor Visits</h1>
+
+
+
+    <nav>
+      <a href="../index.html">main</a> |
+      <a href="Animal.html">Manage Animals</a> |
+      <a href="Habitat.html">Manage Habitats</a> |
+      <a href="Zoo.html">Manage Zoos</a> |
+      <a href="Employee.html">Manage Employees</a> |
+     
+
+  
+  
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <section>
+        
+      <h3>Doctor Visit Database</h3>
+        
+      <article>
+        
+        This section is a complete list of all recorded doctor visits in our database. Click on a note button to view 
+        the remarks on that comment.
+       
+        Viewing doctor's notes is currently not functional.
+      </article>
+     
+      <article>
+       <!--We need to use javascript to append the "edit, update" entries automatically.-->
+     
+        <table id = "doctorVisitTable">
+          <tr id = "doctorVisitTableheadings">
+            <th class = "prikey">Visit ID</th> 
+            <th class = "forkey">Animal ID</th>
+            <th>Reason</th>
+            <th>Doctors Notes</th>
+            
+
+          </tr>
+          
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>not growing</td>
+            <td><button>View Doctor's Note</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>will not eat and dead skin on back</td>
+            <td><button>View Doctor's Note</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>constantly shivering</td>
+            <td><button>View Doctor's Note</button></td>
+          </tr>
+        </table> 
+      </article>
+       
+    </section>
+    <div class = "warning">
+        Please do NOT enter any data you wish to be saved at the moment.
+    </div>
+    <section id = "doctorVisitDataEntry">
+        <h3>Doctor Visit Data Entry Form</h3>
+        <form action="">
+            <fieldset>
+                <legend>If a animal has visited the doctor, please fill out this form below.
+                </legend>
+                <div>
+
+                    <input type="text" name="animal_ID" required>
+                    <label>Enter the animal id that this occured to.</label>
+                </div>
+                <div>
+                  <input type="text" name="reason" required>
+                  <label>Enter a one sentence reason behind this visit.</label>
+                </div>
+             
+                <div>
+                    <input type="text" name="employee_Name" required>
+                    <label>Enter the employee's name</label>
+                </div>
+             
+                <input type="submit" value="Submit">
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Type out your comments on the employee below.</legend>
+
+                <div>
+
+                  <textarea name="doctor_Note"></textarea>
+                  <label>Enter the doctor's remarks and notes about the animal's visit.</label>
+                </div>
+                  
+                  <input type="submit" value="Submit">
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <footer style="background-color:rgb(218, 63, 25);"> Larsen Freund & Jacob Hutalla, 2024</footer>
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
